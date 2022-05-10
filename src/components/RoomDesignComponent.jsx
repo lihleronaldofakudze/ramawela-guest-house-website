@@ -25,7 +25,7 @@ const RoomDesignComponent = ({ name, guest, feet, price }) => {
       <Stack
         direction="row"
         sx={{
-          backgroundColor: "rgba(0,0,0,0.2)",
+          backgroundColor: "rgba(0,0,0,0.5)",
         }}
         justifyContent="space-between"
       >
@@ -36,7 +36,7 @@ const RoomDesignComponent = ({ name, guest, feet, price }) => {
           {feet} ft
         </Button>
         <Button variant="text" color="inherit">
-          From E{price}
+          From R {price}
         </Button>
       </Stack>
     </Stack>

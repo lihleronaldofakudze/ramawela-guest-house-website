@@ -39,7 +39,7 @@ body {
 }
 
 .search {
-  background-image: url('./images//guest-house-three.jpg');
+  background-image: url('./images//guest-house-two.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@ body {
 }
 
 .room {
-  background-image: url('./images//guest-house-four.jpg');
+  background-image: url('./images//guest-house-three.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,11 +62,20 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 60vh;
 }
 
 
 .booking {
-  background-image: url('./images//guest-house-seven.jpg');
+  background-image: url('./images//guest-house-five.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reach-us {
+  background-image: url('./images//guest-house-six.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

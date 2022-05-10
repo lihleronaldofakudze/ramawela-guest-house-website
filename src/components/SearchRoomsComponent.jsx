@@ -17,158 +17,160 @@ import IconButton from "@mui/material/IconButton";
 
 const SearchRoomsComponent = () => {
   return (
-    <Container maxWidth="lg" className="search" sx={{ m: 5 }} disableGutters>
-      <Box
-        className="search-cover"
-        sx={{
-          p: 4,
-        }}
-      >
-        <Grid container spacing={1}>
-          <Grid
-            item
-            container
-            justifyContent="space-around"
-            alignItems="center"
-            direction="column"
-            md={4}
-            xs={12}
-            sx={{
-              color: "#FFFFFF",
-              textAlign: "center",
-            }}
-          >
-            <Typography variant="h2" color="inherit">
-              Holiday Enjoy
-            </Typography>
-            <Typography variant="body1" color="inherit">
-              X
-            </Typography>
-            <Typography variant="body1" color="inherit">
-              Nostrud Lorem exercitation proident nostrud quis consectetur
-              proident sit officia do.Dolor est dolor labore exercitation
-              incididunt aliqua labore ullamco.
-            </Typography>
-            <Button
-              variant="outlined"
-              color="inherit"
+    <Box sx={{ p: 5 }}>
+      <Container maxWidth="lg" className="search" disableGutters>
+        <Box
+          className="search-cover"
+          sx={{
+            p: 4,
+          }}
+        >
+          <Grid container spacing={1}>
+            <Grid
+              item
+              container
+              justifyContent="space-around"
+              alignItems="center"
+              direction="column"
+              md={4}
+              xs={12}
               sx={{
-                borderRadius: "0px",
+                color: "#FFFFFF",
+                textAlign: "center",
               }}
             >
-              Available Rooms
-            </Button>
-          </Grid>
-          <Grid item md={4} xs={12}>
-            <Paper square>
-              <Box
-                className="second-bg-cl"
-                sx={{ p: 3, textAlign: "center", color: "#FFFFFF" }}
-              >
-                <Typography variant="h4" color="inherit">
-                  Search Rooms
-                </Typography>
-                <Typography variant="subtitle1" color="inherit">
-                  STARTING BOOKING
-                </Typography>
-              </Box>
-              <Stack direction="row" justifyContent="space-around">
-                <Button variant="text" color="primary">
-                  CHECK IN
-                </Button>
-                <Button variant="text" color="primary">
-                  CHECK OUT
-                </Button>
-              </Stack>
-              <Stack
-                direction="row"
-                justifyContent="space-around"
-                alignItems="center"
-                sx={{
-                  p: 2,
-                }}
-              >
-                <Button
-                  variant="text"
-                  color="primary"
-                  endIcon={<ArrowDropDownRoundedIcon />}
-                >
-                  <span>10</span> MAY
-                </Button>
-                <Button
-                  variant="text"
-                  color="primary"
-                  endIcon={<ArrowDropDownRoundedIcon />}
-                >
-                  <span>11</span> MAY
-                </Button>
-              </Stack>
-              <Stack
-                direction="row"
-                justifyContent="space-around"
-                alignItems="center"
-                sx={{
-                  p: 2,
-                }}
-              >
-                <IconButton aria-label="minus">
-                  <RemoveCircleOutlineRoundedIcon />
-                </IconButton>
-                <Button variant="text" color="primary">
-                  1 GUEST
-                </Button>
-                <IconButton aria-label="minus">
-                  <AddCircleOutlineRoundedIcon />
-                </IconButton>
-              </Stack>
+              <Typography variant="h2" color="inherit">
+                Holiday Enjoy
+              </Typography>
+              <Typography variant="body1" color="inherit">
+                X
+              </Typography>
+              <Typography variant="body1" color="inherit">
+                Nostrud Lorem exercitation proident nostrud quis consectetur
+                proident sit officia do.Dolor est dolor labore exercitation
+                incididunt aliqua labore ullamco.
+              </Typography>
               <Button
-                variant="contained"
-                color="primary"
-                size="small"
-                fullWidth
+                variant="outlined"
+                color="inherit"
                 sx={{
                   borderRadius: "0px",
                 }}
               >
-                Check availability
+                Available Rooms
               </Button>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            container
-            justifyContent="space-around"
-            alignItems="center"
-            direction="column"
-            md={4}
-            xs={12}
-            sx={{
-              color: "#FFFFFF",
-              textAlign: "center",
-            }}
-          >
-            <Typography variant="h4" color="inherit">
-              Best Room Price
-            </Typography>
-            <Typography variant="body1" color="inherit">
-              VILLA LUXURY
-            </Typography>
-            <Typography variant="body1" color="inherit">
-              2 June to 28 June
-            </Typography>
-            <Button
-              variant="outlined"
-              color="inherit"
+            </Grid>
+            <Grid item md={4} xs={12}>
+              <Paper square>
+                <Box
+                  className="second-bg-cl"
+                  sx={{ p: 3, textAlign: "center", color: "#FFFFFF" }}
+                >
+                  <Typography variant="h4" color="inherit">
+                    Search Rooms
+                  </Typography>
+                  <Typography variant="subtitle1" color="inherit">
+                    STARTING BOOKING
+                  </Typography>
+                </Box>
+                <Stack direction="row" justifyContent="space-around">
+                  <Button variant="text" color="primary">
+                    CHECK IN
+                  </Button>
+                  <Button variant="text" color="primary">
+                    CHECK OUT
+                  </Button>
+                </Stack>
+                <Stack
+                  direction="row"
+                  justifyContent="space-around"
+                  alignItems="center"
+                  sx={{
+                    p: 2,
+                  }}
+                >
+                  <Button
+                    variant="text"
+                    color="primary"
+                    endIcon={<ArrowDropDownRoundedIcon />}
+                  >
+                    <span>10</span> MAY
+                  </Button>
+                  <Button
+                    variant="text"
+                    color="primary"
+                    endIcon={<ArrowDropDownRoundedIcon />}
+                  >
+                    <span>11</span> MAY
+                  </Button>
+                </Stack>
+                <Stack
+                  direction="row"
+                  justifyContent="space-around"
+                  alignItems="center"
+                  sx={{
+                    p: 2,
+                  }}
+                >
+                  <IconButton aria-label="minus">
+                    <RemoveCircleOutlineRoundedIcon />
+                  </IconButton>
+                  <Button variant="text" color="primary">
+                    1 GUEST
+                  </Button>
+                  <IconButton aria-label="minus">
+                    <AddCircleOutlineRoundedIcon />
+                  </IconButton>
+                </Stack>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  fullWidth
+                  sx={{
+                    borderRadius: "0px",
+                  }}
+                >
+                  Check availability
+                </Button>
+              </Paper>
+            </Grid>
+            <Grid
+              item
+              container
+              justifyContent="space-around"
+              alignItems="center"
+              direction="column"
+              md={4}
+              xs={12}
               sx={{
-                borderRadius: "0px",
+                color: "#FFFFFF",
+                textAlign: "center",
               }}
             >
-              All promotions
-            </Button>
+              <Typography variant="h4" color="inherit">
+                Best Room Price
+              </Typography>
+              <Typography variant="body1" color="inherit">
+                VILLA LUXURY
+              </Typography>
+              <Typography variant="body1" color="inherit">
+                2 June to 28 June
+              </Typography>
+              <Button
+                variant="outlined"
+                color="inherit"
+                sx={{
+                  borderRadius: "0px",
+                }}
+              >
+                All promotions
+              </Button>
+            </Grid>
           </Grid>
-        </Grid>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 

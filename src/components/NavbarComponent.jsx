@@ -72,6 +72,7 @@ const NavbarComponent = () => {
                     bgcolor: "#6B6978",
                     "&:hover": {
                       color: "#444444",
+                      borderRadius: 0,
                     },
                   }}
                 >

@@ -1,6 +1,8 @@
 import React from "react";
 
-// Images
+// Responsive
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 // Components
 import RoomDesignComponent from "./RoomDesignComponent";
@@ -10,8 +12,12 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import BookingDesignComponent from "./BookingDesignComponent";
 
 const OurRoomsComponent = () => {
+  const theme = useTheme();
+  const desktop = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <Container
       maxWidth="lg"
@@ -39,16 +45,16 @@ const OurRoomsComponent = () => {
           </Grid>
         ))}
       </Grid>
-      <Container maxWidth="md">
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          sx={{
-            height: "60vh",
-            color: "grey.500",
-          }}
-        >
+      <Container
+        maxWidth="md"
+        sx={{
+          p: 3,
+          color: "#C4C4C4",
+          height: "60vh",
+          my: 4,
+        }}
+      >
+        <Grid container justifyContent="center" alignItems="center">
           <Grid item md={8} xs={12} className="best-room"></Grid>
           <Grid
             item
@@ -68,7 +74,13 @@ const OurRoomsComponent = () => {
             <Typography variant="h5" color="textSecondary">
               X
             </Typography>
-            <Typography variant="body1" color="textSecondary">
+            <Typography
+              variant="body1"
+              color="textSecondary"
+              sx={{
+                pb: 2,
+              }}
+            >
               Nostrud consequat non labore proident in eu nisi.Deserunt culpa
               duis culpa amet eu esse exercitation culpa exercitation irure
               occaecat.Ut consequat sunt enim voluptate cillum eiusmod et
@@ -79,7 +91,6 @@ const OurRoomsComponent = () => {
               color="primary"
               size="small"
               sx={{
-                mt: 2,
                 borderRadius: "0px",
               }}
             >
@@ -88,6 +99,24 @@ const OurRoomsComponent = () => {
           </Grid>
         </Grid>
       </Container>
+      {desktop ? (
+        <Container maxWidth="lg" sx={{ pt: 5 }}>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}
+          >
+            {rooms.map((room, index) => (
+              <Grid item xs={12} sm={4} md={4} key={index}>
+                <BookingDesignComponent {...room} />
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      ) : (
+        <Container></Container>
+      )}
     </Container>
   );
 };

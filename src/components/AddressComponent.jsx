@@ -7,7 +7,13 @@ const AddressComponent = () => {
   return (
     <div className="second-bg-cl">
       <Container maxWidth="lg" disableGutters>
-        <Grid container spacing={1}>
+        <Grid
+          container
+          spacing={1}
+          sx={{
+            textAlign: "center",
+          }}
+        >
           <Grid
             item
             container

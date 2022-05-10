@@ -7,6 +7,10 @@ import WelcomeComponent from "../components/WelcomeComponent";
 import AddressComponent from "../components/AddressComponent";
 import SearchRoomsComponent from "../components/SearchRoomsComponent";
 import OurRoomsComponent from "../components/OurRoomsComponent";
+import OurServicesComponent from "../components/OurServicesComponent";
+import ReachUsComponent from "../components/ReachUsComponent";
+import ClientReviewsComponent from "../components/ClientReviewsComponent";
+import FooterComponent from "../components/FooterComponent";
 
 const HomePage = () => {
   return (
@@ -17,6 +21,10 @@ const HomePage = () => {
       <AddressComponent />
       <SearchRoomsComponent />
       <OurRoomsComponent />
+      <OurServicesComponent />
+      <ReachUsComponent />
+      <ClientReviewsComponent />
+      <FooterComponent />
     </>
   );
 };

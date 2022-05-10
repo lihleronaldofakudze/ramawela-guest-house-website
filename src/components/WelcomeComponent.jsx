@@ -44,7 +44,13 @@ const WelcomeComponent = () => {
               <br />
               EXPERIENCE
             </Typography>
-            <Button variant="outlined" color="inherit">
+            <Button
+              variant="outlined"
+              color="inherit"
+              sx={{
+                borderRadius: "0px",
+              }}
+            >
               View All Rooms
             </Button>
           </Grid>
