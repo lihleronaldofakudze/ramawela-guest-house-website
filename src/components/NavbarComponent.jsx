@@ -1,6 +1,11 @@
 import React from "react";
 
 // Responsive
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+// Icons
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 // Material UI
 import AppBar from "@mui/material/AppBar";
@@ -9,8 +14,12 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
 
 const NavbarComponent = () => {
+  const theme = useTheme();
+  const desktop = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <AppBar position="relative" color="primary" elevation={0.0}>
       <Toolbar>
@@ -18,7 +27,7 @@ const NavbarComponent = () => {
           <Grid
             container
             spacing={1}
-            justifyContent="space-between"
+            justifyContent={desktop ? "flex-end" : "center"}
             alignItems="center"
           >
             <Grid item md={3} xs={12}>
@@ -28,44 +37,56 @@ const NavbarComponent = () => {
                 sx={{
                   color: "#ffffff",
                   cursor: "pointer",
+                  textAlign: desktop ? "left" : "center",
                 }}
               >
                 RAMAWELA GUEST HOUSE
               </Typography>
             </Grid>
-            <Grid
-              item
-              container
-              justifyContent="flex-end"
-              alignItems="center"
-              md={9}
-              xs={12}
-            >
-              {pages.map((page, index) => (
+            {desktop ? (
+              <Grid
+                item
+                container
+                justifyContent="flex-end"
+                alignItems="center"
+                md={9}
+                xs={12}
+              >
+                {pages.map((page, index) => (
+                  <Button
+                    variant="text"
+                    color="inherit"
+                    size="small"
+                    sx={{ mx: 2 }}
+                    key={index}
+                  >
+                    {page.name}
+                  </Button>
+                ))}
                 <Button
-                  variant="text"
+                  variant="contained"
                   color="inherit"
                   size="small"
-                  sx={{ mx: 2 }}
+                  sx={{
+                    mx: 2,
+                    bgcolor: "#6B6978",
+                    "&:hover": {
+                      color: "#444444",
+                    },
+                  }}
                 >
-                  {page.name}
+                  Book Now
                 </Button>
-              ))}
-              <Button
-                variant="contained"
-                color="inherit"
-                size="small"
-                sx={{
-                  mx: 2,
-                  bgcolor: "#6B6978",
-                  "&:hover": {
-                    color: "#444444",
-                  },
-                }}
-              >
-                Book Now
-              </Button>
-            </Grid>
+              </Grid>
+            ) : (
+              <IconButton aria-label="menu">
+                <MenuRoundedIcon
+                  sx={{
+                    color: "#ffffff",
+                  }}
+                />
+              </IconButton>
+            )}
           </Grid>
         </Container>
       </Toolbar>

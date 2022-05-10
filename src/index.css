@@ -6,3 +6,68 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.welcome {
+  background-image: url('./images//guest-house-one.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+}
+
+.welcome-cover {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 80vh;
+  width: 100%;
+}
+
+.first-cl {
+  color: #6B6978;
+}
+
+.first-bg-cl {
+  background-color: #6B6978;
+}
+
+.second-cl {
+  color: #444444;
+}
+
+.second-bg-cl {
+  background-color: #444444;
+}
+
+.search {
+  background-image: url('./images//guest-house-three.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.search-cover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.room {
+  background-image: url('./images//guest-house-four.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.best-room {
+  background-image: url('./images//guest-house-four.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.booking {
+  background-image: url('./images//guest-house-seven.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

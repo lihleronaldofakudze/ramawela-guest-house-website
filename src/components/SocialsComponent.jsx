@@ -27,14 +27,14 @@ const SocialsComponent = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={6}>
             {socials.map((social, index) => (
-              <IconButton size="small" href={social.url}>
+              <IconButton size="small" href={social.url} key={index}>
                 {social.icon}
               </IconButton>
             ))}
           </Grid>
-          <Grid item container justifyContent="flex-end" md={6} xs={12}>
+          <Grid item container justifyContent="flex-end" md={6} xs={6}>
             <Button
               variant="text"
               color="inherit"
